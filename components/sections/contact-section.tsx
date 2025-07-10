@@ -1,7 +1,7 @@
 import { Mail, MessageSquare } from "lucide-react";
 import HeadingBadge from "@/components/heading-badge";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaXTwitter, FaMedium } from "react-icons/fa6";
 
 export function ContactSection() {
   return (
@@ -46,13 +46,13 @@ export function ContactSection() {
                 href="mailto:pritamfinds@gmail.com"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-gray-100 dark:bg-[#191a1a] text-[#08090a] dark:text-slate-200 hover:bg-gray-200 dark:hover:bg-gray-500/10 transition-colors"
               >
-                pritamfinds@gmail.com
+                amankumarr7390@gmail.com
                 <Mail className="w-4 h-4 mt-1" color="#2563EB" />
               </a>
 
               <div className="flex items-center justify-center gap-4 pt-4">
                 <a
-                  href="https://x.com/PritamGhosh010"
+                  href="https://x.com/Amank1412"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group p-3 rounded-sm bg-gray-100 dark:bg-[#191a1a] text-[#08090a] dark:text-slate-200 hover:bg-gray-200 dark:hover:bg-gray-500/10 transition-colors relative overflow-hidden"
@@ -62,7 +62,7 @@ export function ContactSection() {
                 </a>
 
                 <a
-                  href="https://github.com/PrtHub"
+                  href="https://github.com/Amank1412"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group p-3 rounded-sm bg-gray-100 dark:bg-[#191a1a] text-[#08090a] dark:text-slate-200 hover:bg-gray-200 dark:hover:bg-gray-500/10 transition-colors relative overflow-hidden"
@@ -72,7 +72,7 @@ export function ContactSection() {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/pritam-ghosh-dev"
+                  href="https://www.linkedin.com/in/Amank1412"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group p-3 rounded-sm bg-gray-100 dark:bg-[#191a1a] text-[#08090a] dark:text-slate-200 hover:bg-gray-200 dark:hover:bg-gray-500/10 transition-colors relative overflow-hidden"
@@ -80,12 +80,22 @@ export function ContactSection() {
                   <span className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gray-200/50 dark:to-gray-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   <FaLinkedin className="relative w-5 h-5" />
                 </a>
+
+                <a
+                  href="https://medium.com/@Amank1412"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-3 rounded-sm bg-gray-100 dark:bg-[#191a1a] text-[#08090a] dark:text-slate-200 hover:bg-gray-200 dark:hover:bg-gray-500/10 transition-colors relative overflow-hidden"
+                >
+                  <span className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gray-200/50 dark:to-gray-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <FaMedium className="relative w-5 h-5" />
+                </a>
               </div>
             </div>
 
             <div className="text-center">
               <p className="inline-block px-4 py-2 text-sm text-[#737373] dark:text-[#A1A1AA] bg-gray-50 dark:bg-[#141414] rounded-sm">
-                💬 I typically respond within 1 hour!
+                💬 I typically respond within 30 Minutes!
               </p>
             </div>
           </div>

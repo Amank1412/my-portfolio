@@ -16,7 +16,7 @@ export function IntroSection() {
         <article className="space-y-5 sm:space-y-6">
           <h1 className="text-5xl font-bold tracking-tight leading-tight">
             <span className="text-[#08090a] dark:text-slate-200">
-              Hi, I&apos;m Pritam
+              Hi, I&apos;m Aman
             </span>
           </h1>
 

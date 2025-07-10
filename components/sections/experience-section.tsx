@@ -5,94 +5,55 @@ import HeadingBadge from "@/components/heading-badge";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { Calendar, ChevronRight, Briefcase } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 type Experience = {
   company: string;
-  companyLink: string;
+  companyLink?: string; // optional now
   position: string;
   duration: string;
   description: string[];
   technologies: string[];
-  link: string;
+  link?: string;
 };
 
 const experiences: Experience[] = [
   {
-    company: "Clipo AI",
-    companyLink: "https://www.linkedin.com/company/clipo-ai",
-    link: "https://clipo.ai",
-    position: "Frontend Developer",
-    duration: "Nov 2024 - Present",
+    company: "WorldQuant",
+  
+    position: "Research Consultant",
+    duration: "May 2025 - Present",
     description: [
-      "Developed and maintained the frontend of Clipo Pro, an AI-powered short content creation and video editing platform using Next JS and TypeScript, improving user engagement by 40%",
-      "Implemented key features including automatic highlights, emoji suggestions, and responsive video templates that enhanced the content creation workflow",
-      "Collaborated with UX designers to create an intuitive interface for AI-driven tools like auto-captioning and multilingual subtitle generation",
+    " Designed and developed several alphas specifically for the USA equity markets using quantitative research methods ",
+    " Performed data analysis, statistical modeling, and backtesting to validate trading strategies",
+    " Utilized financial data and market insights to identify consistent and profitable investment opportunities.",
+
+
     ],
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "UI/UX"],
+    technologies: ["Quantitative Research", "Alpha Generation", "Statistical modeling", "Python",],
   },
   {
-    company: "Resource Plan",
-    companyLink: "https://www.linkedin.com/company/resourceplan",
-    link: "https://resourceplan.io",
-    position: "Full Stack Developer",
+    company: "Internshala",
+  
+    position: "Internshala Student Program",
     duration: "Sep 2024 - Nov 2024",
     description: [
-      "Developed and enhanced ResourcePlan's workflow management platform for architecture and engineering firms using Next JS and TypeScript",
-      "Built interactive dashboards and data visualization components while implementing RESTful APIs using Express.js and MongoDB",
-      "Designed both frontend interfaces and backend services for critical features including project budgeting, staff scheduling, and revenue forecasting tools",
+      " Selected as an Internshala Student Program representative to promote internship and training opportunities within my college",
+      " Acted as a bridge between Internshala and students, conducting awareness drives and onboarding peers",
+      " Helped increase student engagement with career-building platforms and resources",
     ],
-    technologies: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Docker",
-    ],
+
+    technologies: ["Leadership", "Collaboration", "Teamwork", "Communication"],
   },
   {
-    company: "MVP Application and Game Design LLC",
-    companyLink: "https://www.linkedin.com/company/mvp-apps",
-    link: "https://mvpapps.com",
+    company: "Stealth Startup",
     position: "Frontend Developer",
-    duration: "June 2024 - July 2024",
+    duration: "Dec 2024 - Dec 2024",
     description: [
-      "Developed responsive and user-centric frontend interfaces for mobile and web applications using React and TypeScript",
-      "Created intuitive UI components and interactive features that enhanced user experience across iOS and Android platforms",
-      "Collaborated with UX designers to implement accessible interfaces following the company's user-centric design approach",
+      " Focused on building clean, responsive, and scalable web applications using React.js",
+      " Experienced in creating reusable components and maintaining modular code structure",
+      " Skilled in integrating APIs and optimizing UI performance for smooth user experiences",
     ],
-    technologies: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Material UI",
-      "Node.js",
-    ],
-  },
-  {
-    company: "Influcon Digitals LLC",
-    companyLink: "https://www.linkedin.com/company/influcon-digitals",
-    link: "https://influcondigitals.com",
-    position: "Full Stack Developer",
-    duration: "Dec 2023 - Jan 2024",
-    description: [
-      "Developed full-stack web applications and digital marketing solutions using React, Next.js, and Node.js technologies",
-      "Built custom CMS platforms and e-commerce solutions with RESTful APIs using Express.js and MongoDB",
-      "Collaborated with the digital marketing team to integrate analytics tools and optimize web performance for improved SEO results",
-    ],
-    technologies: [
-      "React",
-      "TypeScript",
-      "Express.js",
-      "MongoDB",
-      "Node.js",
-      "Next.js",
-      "Tailwind CSS",
-      "Material UI",
-    ],
+   technologies: ["React", "JavaScript", "Node.js", "Express.js"],
   },
 ];
 
@@ -158,14 +119,9 @@ export function ExperienceSection() {
                         )}
                       />
                     </div>
-                    <Link
-                      href={experience.companyLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center z-50 gap-2 text-[#737373] dark:text-[#A1A1AA]"
-                    >
-                      <span>{experience.company}</span>
-                    </Link>
+                    <span className="flex items-center z-50 gap-2 text-[#737373] dark:text-[#A1A1AA]">
+                      {experience.company}
+                    </span>
                   </section>
                   <section className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 dark:bg-[#191a1a] text-[#08090a] dark:text-slate-200 text-sm">
                     <Calendar className="w-4 h-4" />
