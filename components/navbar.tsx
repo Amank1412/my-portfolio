@@ -23,7 +23,7 @@ type SectionPosition = {
 };
 
 export function Navbar({
-  developerInitial = "P",
+  developerInitial = "",
   sections = [
     // { id: "about", label: "About" },
     { id: "intro", label: "Intro" },
