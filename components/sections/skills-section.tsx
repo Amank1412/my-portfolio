@@ -1,19 +1,10 @@
 "use client";
 
 import HeadingBadge from "@/components/heading-badge";
-import { IconBrandNextjs } from "@tabler/icons-react";
-import { DiRedis } from "react-icons/di";
-import {
-  SiExpress,
-  SiMongodb,
-  SiTypescript,
-  SiPrisma,
-  SiDrizzle,
-} from "react-icons/si";
+import { SiExpress, SiMongodb, SiTypescript } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 import {
   FaCss3,
-  FaDocker,
   FaGitAlt,
   FaGithub,
   FaHtml5,
@@ -21,15 +12,8 @@ import {
   FaPython,
   FaReact,
 } from "react-icons/fa";
-import {
-  RiFirebaseFill,
-  RiSupabaseFill,
-  RiTailwindCssFill,
-  RiDatabase2Fill,
-} from "react-icons/ri";
-import { FiFigma } from "react-icons/fi";
+import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
-import { BiLogoPostgresql } from "react-icons/bi";
 import { Lightbulb } from "lucide-react";
 
 type Skill = {
@@ -42,7 +26,6 @@ type SkillCategory = {
   skills: Skill[];
 };
 
-// Sample skills data
 const skillCategories: SkillCategory[] = [
   {
     name: "Languages",
