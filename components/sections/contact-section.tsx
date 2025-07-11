@@ -14,13 +14,13 @@ export function ContactSection() {
     // Fetch once on mount and then every 10 seconds
     let isMounted = true;
     const fetchCount = () => {
-      fetch('https://api.countapi.xyz/get/amankumar-portfolio/visits')
+      fetch('https://api.countapi.xyz/get/amankumar-portfolio-20240711/visits')
         .then(res => res.json())
         .then(data => { if (isMounted) setVisitorCount(data.value); })
         .catch(() => { if (isMounted) setVisitorCount(null); });
     };
     // Increment on first load
-    fetch('https://api.countapi.xyz/hit/amankumar-portfolio/visits')
+    fetch('https://api.countapi.xyz/hit/amankumar-portfolio-20240711/visits')
       .then(res => res.json())
       .then(data => { if (isMounted) setVisitorCount(data.value); })
       .catch(() => { if (isMounted) setVisitorCount(null); });
@@ -138,8 +138,8 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-      <div className="mt-2 text-center text-sm text-[#737373] dark:text-[#A1A1AA]">
-        Made with <span className="text-red-500">❤️</span> by Aman
+      <div className="w-full flex justify-center mt-0">
+        <span className="text-center text-sm text-[#737373] dark:text-[#A1A1AA]">Made with <span className="text-red-500">❤️</span> by Aman</span>
       </div>
     </section>
   );
