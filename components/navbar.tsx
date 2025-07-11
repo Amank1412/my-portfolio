@@ -6,7 +6,6 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Menu, X } from "lucide-react";
 import MobileNav from "./mobile-nav";
-import { ModeToggle } from "./mode-toggle";
 
 interface NavbarProps {
   developerInitial?: string;
@@ -41,7 +40,6 @@ export function Navbar({
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [visitorCount, setVisitorCount] = useState<number | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -97,14 +95,6 @@ export function Navbar({
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [sections, activeSection, mounted]);
-
-  useEffect(() => {
-    // Replace 'your-namespace' and 'your-key' with unique values for your site
-    fetch('https://api.countapi.xyz/hit/amankumar-portfolio/visits')
-      .then(res => res.json())
-      .then(data => setVisitorCount(data.value))
-      .catch(() => setVisitorCount(null));
-  }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!mounted) return;
