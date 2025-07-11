@@ -192,35 +192,37 @@ export function Navbar({
           </Link>
         </div>
 
-        <div className="hidden sm:flex items-center space-x-1">
-          {sections.map((section) => (
-            <Link
-              key={section.id}
-              href={`#${section.id}`}
-              className={cn(
-                "px-3 py-1.5 text-sm rounded-full transition-all duration-300 relative overflow-hidden",
-                activeSection === section.id
-                  ? "text-black dark:text-white bg-gray-100 dark:bg-[#191a1a] font-normal"
-                  : "text-[#737373] dark:text-[#A1A1AA] hover:text-black dark:hover:text-white font-normal"
-              )}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(section.id);
-              }}
-            >
-              {activeSection === section.id && (
-                <div className="absolute inset-0 opacity-20">
-                  <div
-                    className={cn(
-                      "absolute inset-0 bg-gradient-to-r from-transparent via-[#08090a]/30 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-slate-500/30 dark:to-transparent"
-                    )}
-                    style={{ animation: "var(--animate-shine)" }}
-                  />
-                </div>
-              )}
-              {section.label}
-            </Link>
-          ))}
+        <div className="flex items-center space-x-1">
+          <div className="hidden sm:flex items-center space-x-1">
+            {sections.map((section) => (
+              <Link
+                key={section.id}
+                href={`#${section.id}`}
+                className={cn(
+                  "px-3 py-1.5 text-sm rounded-full transition-all duration-300 relative overflow-hidden",
+                  activeSection === section.id
+                    ? "text-black dark:text-white bg-gray-100 dark:bg-[#191a1a] font-normal"
+                    : "text-[#737373] dark:text-[#A1A1AA] hover:text-black dark:hover:text-white font-normal"
+                )}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(section.id);
+                }}
+              >
+                {activeSection === section.id && (
+                  <div className="absolute inset-0 opacity-20">
+                    <div
+                      className={cn(
+                        "absolute inset-0 bg-gradient-to-r from-transparent via-[#08090a]/30 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-slate-500/30 dark:to-transparent"
+                      )}
+                      style={{ animation: "var(--animate-shine)" }}
+                    />
+                  </div>
+                )}
+                {section.label}
+              </Link>
+            ))}
+          </div>
           <div className="ml-4">
             <ModeToggle />
           </div>
