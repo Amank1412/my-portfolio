@@ -11,10 +11,22 @@ export function ContactSection() {
   const [visitorCount, setVisitorCount] = useState<number | null>(null);
 
   useEffect(() => {
+    // Fetch once on mount and then every 10 seconds
+    let isMounted = true;
+    const fetchCount = () => {
+      fetch('https://api.countapi.xyz/get/amankumar-portfolio/visits')
+        .then(res => res.json())
+        .then(data => { if (isMounted) setVisitorCount(data.value); })
+        .catch(() => { if (isMounted) setVisitorCount(null); });
+    };
+    // Increment on first load
     fetch('https://api.countapi.xyz/hit/amankumar-portfolio/visits')
       .then(res => res.json())
-      .then(data => setVisitorCount(data.value))
-      .catch(() => setVisitorCount(null));
+      .then(data => { if (isMounted) setVisitorCount(data.value); })
+      .catch(() => { if (isMounted) setVisitorCount(null); });
+    // Poll every 10 seconds
+    const interval = setInterval(fetchCount, 10000);
+    return () => { isMounted = false; clearInterval(interval); };
   }, []);
 
   return (
@@ -125,6 +137,9 @@ export function ContactSection() {
             <span>{visitorCount !== null ? visitorCount : '--'}</span>
           </div>
         </div>
+      </div>
+      <div className="mt-2 text-center text-sm text-[#737373] dark:text-[#A1A1AA]">
+        Made with <span className="text-red-500">❤️</span> by Aman
       </div>
     </section>
   );
