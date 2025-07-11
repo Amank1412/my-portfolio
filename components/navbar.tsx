@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Menu, X } from "lucide-react";
 import MobileNav from "./mobile-nav";
+import { ModeToggle } from "./mode-toggle";
 
 interface NavbarProps {
   developerInitial?: string;
@@ -30,7 +31,7 @@ export function Navbar({
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "experience", label: "Experience" },
-    { id: "services", label: "Services" },
+    { id: "achievements", label: "Achievements" },
     { id: "contact", label: "Contact" },
   ],
 }: NavbarProps) {
@@ -220,6 +221,9 @@ export function Navbar({
               {section.label}
             </Link>
           ))}
+          <div className="ml-4">
+            <ModeToggle />
+          </div>
         </div>
 
         <button

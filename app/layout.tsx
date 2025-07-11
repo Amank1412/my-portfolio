@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pritam Ghosh",
+  title: "Aman Kumar",
   description:
-    "Portfolio of Pritam Ghosh - Software Developer specializing in modern web technologies",
+    "Portfolio of Aman Kumar - Software Developer specializing in modern web technologies",
   keywords: [
-    "Pritam Ghosh",
-    "Pritam",
-    "Ghosh",
+    "Aman Kumar",
+    "Aman",
+    "Kumar",
     "Portfolio",
     "Software Developer",
     "Full Stack Developer",
@@ -29,35 +29,35 @@ export const metadata: Metadata = {
     "Backend Developer",
   ],
   openGraph: {
-    title: "Pritam Ghosh - Full Stack Developer",
+    title: "Aman Kumar - Full Stack Developer",
     description:
-      "Portfolio of Pritam Ghosh - Software Developer specializing in modern web technologies",
+      "Portfolio of Aman Kumar - Software Developer specializing in modern web technologies",
     type: "website",
-    url: "https://pritam.tech",
-    siteName: "Pritam Ghosh",
+    url: "https://amankumar.tech",
+    siteName: "Aman Kumar",
     locale: "en_US",
     images: [
       {
-        url: "https://pritam.tech/og-image.png",
+        url: "https://amankumar.tech/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Pritam Ghosh - Full Stack Developer",
+        alt: "Aman Kumar - Full Stack Developer",
       },
     ],
   },
   twitter: {
-    title: "Pritam Ghosh - Full Stack Developer",
+    title: "Aman Kumar - Full Stack Developer",
     description:
-      "Portfolio of Pritam Ghosh - Software Developer specializing in modern web technologies",
+      "Portfolio of Aman Kumar - Software Developer specializing in modern web technologies",
     card: "summary_large_image",
-    site: "@PritamGhosh010",
-    creator: "@PritamGhosh010",
+    site: "@AmanKumar",
+    creator: "@AmanKumar",
     images: [
       {
-        url: "https://pritam.tech/og-image.png",
+        url: "https://amankumar.tech/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Pritam Ghosh - Full Stack Developer",
+        alt: "Aman Kumar - Full Stack Developer",
       },
     ],
   },

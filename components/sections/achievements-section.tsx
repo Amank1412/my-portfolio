@@ -92,7 +92,6 @@ export function AchievementsSection() {
           </p>
         </div>
       </div>
-
       <div className="grid grid-cols-1 gap-3 w-full">
         {achievements.map((item, index) => (
           <SpotlightCard

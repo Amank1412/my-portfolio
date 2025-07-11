@@ -5,7 +5,7 @@ import { Navbar } from "@/components/navbar";
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <Navbar developerInitial="P" />
+      <Navbar developerInitial="A" />
       <main className="min-h-screen w-full max-w-[700px] mx-auto px-5">
         {children}
       </main>
