@@ -232,17 +232,7 @@ export function Navbar({
               </Link>
             ))}
           </div>
-          {/* Visitor count feature */}
-          <div className="flex items-center ml-2 px-2 py-1 bg-gray-100 dark:bg-[#191a1a] rounded text-sm text-gray-700 dark:text-gray-200 min-w-[48px] justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 mr-1">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12C2.25 12 5.25 5.25 12 5.25s9.75 6.75 9.75 6.75-3 6.75-9.75 6.75S2.25 12 2.25 12z" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <span>{visitorCount !== null ? visitorCount : '--'}</span>
-          </div>
-          <div className="ml-4">
-            <ModeToggle />
-          </div>
+          {/* Removed ModeToggle and visitor count from navbar */}
         </div>
 
         <button
