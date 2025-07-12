@@ -21,14 +21,43 @@ type Project = {
 const projects: Project[] = [
   {
     id: "1",
-    title: "Artifact UI",
+    title: "XCODE",
     description:
-      "Artifact UI is a modern UI component library designed to help developers and businesses build beautiful websites, web applications, and user interfaces with ease. it provides a comprehensive design system focused on aesthetics and performance.",
-    imageUrl: "",
-    Image: "NEXT_U.png",
-    tags: ["React", "Tailwind CSS", "Framer Motion", "TypeScript"],
+      "A modern and stylish developer-focused landing page built using React, Tailwind CSS, and Spline for 3D elements",
+    imageUrl: "/xcode2.jpg",
+    Image: "",
+    tags: ["React", "Tailwind CSS", "Boxicons", "JavaScript"],
+    link: "https://xcode-navy.vercel.app/",
+    githubLink: "https://github.com/Amank1412/XCODE",
+    
+  },
+
+    {
+    id: "2",
+    title: "Nexora",
+    description:
+      "Nexora is a modern, responsive web application built with React, Vite, and Tailwind CSS. It aims to deliver a clean UI, fast performance.",
+    imageUrl: "/nex.jpg",
+    Image: "",
+    tags: ["React", "Tailwind CSS", "Lucide React", "JavaScript"],
+    link: "https://nexora-yz8g.vercel.app/",
+    githubLink: "https://github.com/Amank1412/Nexora",
+    
+  },
+
+  
+  
+   {
+    id: "3",
+    title: "NEXT_U",
+    description:
+      "Next_U is a gamified self-growth app that turns real-life habits into an RPG adventure with levels, achievements, and leaderboards",
+    imageUrl: "/next.jpg",
+    Image: "",
+   tags: ["React", "Next.js", "TailwindCSS", "Node.js", "Express.js", "MongoDB",  "Firebase"],
+
     link: "https://queue-4-u-amuhacks-4-0.vercel.app/",
-    githubLink: "https://github.com/Amank1412/AMUHACKS-NextU",
+    githubLink: "https://github.com/Sd2k3/Queue_4U_AMUHACKS4.0",
     
   },
 

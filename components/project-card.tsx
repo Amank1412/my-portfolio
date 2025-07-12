@@ -26,6 +26,15 @@ interface ProjectCardProps {
   project: Project;
 }
 
+// ✅ URL Validator
+const isValidUrl = (url?: string): boolean => {
+  try {
+    return Boolean(url && new URL(url));
+  } catch {
+    return false;
+  }
+};
+
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <SpotlightCard
@@ -77,14 +86,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
           <div className="pt-2 flex justify-between items-center">
             <div className="flex items-center gap-2 text-xs font-medium">
-              <div className="flex items-center gap-1 px-2 py-1 rounded-sm bg-white dark:bg-[#0a0a0a] border border-gray-200/80 dark:border-gray-500/10 text-[#737373] dark:text-[#A1A1AA] group-hover:border-gray-900/30 dark:group-hover:border-gray-500/20 transition-all duration-300">
-                <CalendarRange className="size-3" />
-                <span>{project.date}</span>
-              </div>
+              {project.date && (
+                <div className="flex items-center gap-1 px-2 py-1 rounded-sm bg-white dark:bg-[#0a0a0a] border border-gray-200/80 dark:border-gray-500/10 text-[#737373] dark:text-[#A1A1AA] group-hover:border-gray-900/30 dark:group-hover:border-gray-500/20 transition-all duration-300">
+                  <CalendarRange className="size-3" />
+                  <span>{project.date}</span>
+                </div>
+              )}
             </div>
 
             <div className="flex gap-2">
-              {project.githubLink && (
+              {isValidUrl(project.githubLink) && (
                 <Link
                   href={project.githubLink}
                   target="_blank"
@@ -103,7 +114,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                   </TooltipProvider>
                 </Link>
               )}
-              {project.link && (
+              {isValidUrl(project.link) && (
                 <Link
                   href={project.link}
                   target="_blank"

@@ -1,7 +1,7 @@
 "use client";
 
 import HeadingBadge from "@/components/heading-badge";
-import { SiExpress, SiMongodb, SiTypescript } from "react-icons/si";
+import { SiCplusplus, SiExpress, SiMongodb, SiTypescript } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 import {
   FaCss3,
@@ -30,11 +30,12 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Languages",
     skills: [
+      { name: "C++", icon: <SiCplusplus color="#00599C" /> },
       { name: "JavaScript", icon: <IoLogoJavascript color="#F7DF1E" /> },
       { name: "TypeScript", icon: <SiTypescript color="#3178C6" /> },
+       { name: "Python", icon: <FaPython color="#3776AB" /> },
       { name: "HTML", icon: <FaHtml5 color="#E34F26" /> },
       { name: "CSS", icon: <FaCss3 color="#1572B6" /> },
-      { name: "Python", icon: <FaPython color="#3776AB" /> },
     ],
   },
   {
