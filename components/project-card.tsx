@@ -26,7 +26,6 @@ interface ProjectCardProps {
   project: Project;
 }
 
-// ✅ URL Validator
 const isValidUrl = (url?: string): boolean => {
   try {
     return Boolean(url && new URL(url));
@@ -84,6 +83,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </span>
             ))}
           </div>
+
           <div className="pt-2 flex justify-between items-center">
             <div className="flex items-center gap-2 text-xs font-medium">
               {project.date && (
@@ -97,7 +97,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <div className="flex gap-2">
               {isValidUrl(project.githubLink) && (
                 <Link
-                  href={project.githubLink}
+                  href={project.githubLink ?? "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative px-1 py-1 text-xs font-medium text-[#08090a] dark:text-gray-300/70 group-hover:text-[#08090a]/90 dark:group-hover:text-gray-300/90 transition-all duration-300 flex items-center gap-1"
@@ -114,9 +114,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
                   </TooltipProvider>
                 </Link>
               )}
+
               {isValidUrl(project.link) && (
                 <Link
-                  href={project.link}
+                  href={project.link ?? "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative px-1 py-1 text-xs font-medium text-[#08090a] dark:text-gray-300/70 group-hover:text-[#08090a]/90 dark:group-hover:text-gray-300/90 transition-all duration-300 flex items-center gap-1"
