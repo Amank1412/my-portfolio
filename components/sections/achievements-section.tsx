@@ -2,10 +2,7 @@ import HeadingBadge from "@/components/heading-badge";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import {
   GraduationCap,
-  Award,
-  Trophy,
-  BookText,
-  CodeIcon,
+  Trophy, // ✅ Only keeping the used icons
 } from "lucide-react";
 
 type Achievement = {
@@ -26,22 +23,19 @@ const achievements: Achievement[] = [
     icon: <GraduationCap className="w-6 h-6" color="#9333EA" />,
   },
   {
-    title: "International Quant Championship 2025 ",
+    title: "International Quant Championship 2025",
     issuer: "WorldQuant",
     date: "June 2025",
     description: "Ranked in the top 20% globally in Stage 1.",
     icon: <Trophy className="w-6 h-6" color="#F59E0B" />,
   },
   {
-    title: "International Quant Championship 2025 ",
+    title: "International Quant Championship 2025",
     issuer: "WorldQuant",
     date: "May 2025",
     description: "Secured Institute Rank 1 in International Quant Championship.",
     icon: <Trophy className="w-6 h-6" color="#F59E0B" />,
   },
-
-
-
 ];
 
 export function AchievementsSection() {
@@ -66,6 +60,7 @@ export function AchievementsSection() {
           </p>
         </div>
       </div>
+
       <div className="grid grid-cols-1 gap-3 w-full">
         {achievements.map((item, index) => (
           <SpotlightCard
