@@ -20,7 +20,7 @@ A sleek, responsive portfolio built with **Next.js 15**, **TypeScript**, and **T
 ## ⚙️ Getting Started
 
 ```bash
-git clone https://github.com/Amank1412/my-portfolio.git
-cd my-portfolio
+git clone https://github.com/Amank1412/My-portfolio.git
+cd My-portfolio
 npm install
 npm run dev
