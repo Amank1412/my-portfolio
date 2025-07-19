@@ -26,7 +26,7 @@ const projects: Project[] = [
       "A modern and stylish developer-focused landing page built using React, Tailwind CSS, and Spline for 3D elements",
     imageUrl: "/xcode2.jpg",
     Image: "",
-    tags: ["React", "Tailwind CSS", "Boxicons", "JavaScript"],
+    tags: ["React", "Tailwind CSS", "JavaScript"],
     link: "https://xcode-navy.vercel.app/",
     githubLink: "https://github.com/Amank1412/XCODE",
     
@@ -39,7 +39,7 @@ const projects: Project[] = [
       "Nexora is a modern, responsive web application built with React, Vite, and Tailwind CSS. It aims to deliver a clean UI, fast performance.",
     imageUrl: "/nex.jpg",
     Image: "",
-    tags: ["React", "Tailwind CSS", "Lucide React", "JavaScript"],
+    tags: ["React", "Tailwind CSS", "JavaScript"],
     link: "https://nexora-yz8g.vercel.app/",
     githubLink: "https://github.com/Amank1412/Nexora",
     
@@ -54,7 +54,7 @@ const projects: Project[] = [
       "Next_U is a gamified self-growth app that turns real-life habits into an RPG adventure with levels, achievements, and leaderboards",
     imageUrl: "/next.jpg",
     Image: "",
-   tags: ["React", "Next.js", "TailwindCSS", "Node.js", "Express.js", "MongoDB",  "Firebase"],
+   tags: ["React", "Node.js", "Express.js", "MongoDB", ],
 
     link: "https://queue-4-u-amuhacks-4-0.vercel.app/",
     githubLink: "https://github.com/Sd2k3/Queue_4U_AMUHACKS4.0",
